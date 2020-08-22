@@ -5,7 +5,6 @@ const SUGGESTION_CHANNEL = '746793292775162007'
 
 Discord.RichEmbed = Discord.MessageEmbed;
 
-const token = 'NzQ2NTAzMDc4MTM5OTIwNDM0.X0BRKw.cX0B5wp-l3nGTozFBlALuEG-WSk';
 const fs = require("fs");
 
 const bot = new Discord.Client();
@@ -91,4 +90,4 @@ bot.on("message", async message => {
 
 
 
-bot.login(token);
+bot.login(process.env.token);
