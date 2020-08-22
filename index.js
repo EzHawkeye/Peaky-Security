@@ -3,7 +3,6 @@ const botConfig = require("./botconfig.json");
 
 const SUGGESTION_CHANNEL = '746510939859189793'
 
-// const token ='NzQ2NTAzMDc4MTM5OTIwNDM0.X0BRKw.JIiWZEIcK_me7t9WqTZr0HrjI-M';
 
 Discord.RichEmbed = Discord.MessageEmbed;
 
