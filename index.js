@@ -5,11 +5,14 @@ const SUGGESTION_CHANNEL = '746793292775162007'
 
 Discord.RichEmbed = Discord.MessageEmbed;
 
-
+const token = 'NzQ2NTAzMDc4MTM5OTIwNDM0.X0BRKw.cX0B5wp-l3nGTozFBlALuEG-WSk';
 const fs = require("fs");
 
 const bot = new Discord.Client();
 bot.commands = new Discord.Collection();
+
+
+
 
 fs.readdir("./commands/", (err, files) => {
 
@@ -75,9 +78,8 @@ bot.on("message", async message => {
         .setFooter(`Community | ${message.author.tag}`)
         message.channel.send(embed).then((message) => {
           const sent = message;
-          sent.react('\:Check:');
-            sent.react('🔴');
-          
+          sent.react ('✅');
+            sent.react('❌');
             
           
         });
@@ -89,4 +91,4 @@ bot.on("message", async message => {
 
 
 
-bot.login(process.env.token);
+bot.login(token);
