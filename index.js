@@ -3,6 +3,7 @@ const botConfig = require("./botconfig.json");
 
 const SUGGESTION_CHANNEL = '746793292775162007'
 
+const token = 'NzQ2NTAzMDc4MTM5OTIwNDM0.X0BRKw.DmkXwPUaxemHJsiUA7srkpMLwgU';
 
 Discord.RichEmbed = Discord.MessageEmbed;
 
@@ -73,7 +74,7 @@ bot.on("message", async message => {
         .setColor(15844367)
         .setTitle('Community Suggesties')
         .setDescription(message.content)
-        .setTimestamp('Community' | (message.author.tag);
+        .setFooter(`Community | ${message.author.tag}`)
         message.channel.send(embed).then((message) => {
           const sent = message;
           sent.react('🟢');
@@ -90,4 +91,4 @@ bot.on("message", async message => {
 
 
 
-bot.login(process.env.token);
+bot.login(token);
