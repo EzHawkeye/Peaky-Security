@@ -73,11 +73,11 @@ bot.on("message", async message => {
         .setColor(15844367)
         .setTitle('Community Suggesties')
         .setDescription(message.content)
-        .setTimestamp(new Date);
+        .setTimestamp('Community' | ${message.author.tag};
         message.channel.send(embed).then((message) => {
           const sent = message;
-          sent.react('✅');
-            sent.react('❌');
+          sent.react('🟢');
+            sent.react('🔴');
           
             
           
