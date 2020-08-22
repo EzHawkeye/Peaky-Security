@@ -1,10 +1,9 @@
 const Discord = require("discord.js");
 const botConfig = require("./botconfig.json");
 
-const SUGGESTION_CHANNEL = '746428338255560784'
-const SUGGESTION_CHANNELL = '746432337557979297'
+const SUGGESTION_CHANNEL = '746510939859189793'
 
-const token ='NzQ2NDI2Mzc5Njc5MzAxNjcz.X0AJvA.IfDRgpXZUXVJZc2EHEwWcMIhKnk';
+// const token ='NzQ2NTAzMDc4MTM5OTIwNDM0.X0BRKw.JIiWZEIcK_me7t9WqTZr0HrjI-M';
 
 Discord.RichEmbed = Discord.MessageEmbed;
 
@@ -41,7 +40,7 @@ bot.on("ready", async () => {
 
     console.log(`BOOMMM ${bot.user.username} is online!`);
 
-    bot.user.setActivity("🛠️ PokéPlay", { type: "PLAYING" });
+    bot.user.setActivity("🛠️ Community", { type: "PLAYING" });
 
 })
 
@@ -73,7 +72,7 @@ bot.on("message", async message => {
         let embed = new Discord.RichEmbed()
         .setAuthor(message.member.nickname ? message.member.nickname : message.author.tag, message.author.avatarURL)
         .setColor(1146986)
-        .setTitle('PokéPlay Suggestions')
+        .setTitle('Community Suggestions')
         .setDescription(message.content)
         .setTimestamp(new Date);
         message.channel.send(embed).then((message) => {
@@ -87,26 +86,9 @@ bot.on("message", async message => {
         return message.delete();
       }
 
-      if (message.channel.id === SUGGESTION_CHANNELL) {
-        let embed = new Discord.RichEmbed()
-        .setAuthor(message.member.nickname ? message.member.nickname : message.author.tag, message.author.displayAvatarURL)
-        .setColor(1146986)
-        .setTitle('Discord Suggestions')
-        .setDescription(message.content)
-        .setTimestamp(new Date);
-        message.channel.send(embed).then((message) => {
-          const sent = message;
-          sent.react('✅');
-            sent.react('❌');
-          
-            
-          
-        });
-        return message.delete();
-      }
 
 }); 
 
 
 
-bot.login(token);
+bot.login(process.env.token);
