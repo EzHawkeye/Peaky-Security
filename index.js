@@ -75,7 +75,7 @@ bot.on("message", async message => {
         .setFooter(`Community | ${message.author.tag}`)
         message.channel.send(embed).then((message) => {
           const sent = message;
-          sent.react('🟢');
+          sent.react('\:Check:');
             sent.react('🔴');
           
             
