@@ -1,6 +1,6 @@
 const discord = require("discord.js");
 
-module.exports.run = async (bot, message, args) => {
+//module.exports.run = async (bot, message, args) => {
 
         message.channel.send({embed: {
             color: 1146986,
@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
     
           return message.delete();
 
-}
+//}
 
 module.exports.help = {
     name: ""
