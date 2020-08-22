@@ -70,6 +70,7 @@ bot.on("message", async message => {
     if (message.channel.id === SUGGESTION_CHANNEL) {
         let embed = new Discord.RichEmbed()
         .setAuthor(message.member.nickname ? message.member.nickname : message.author.tag, message.author.avatarURL)
+        .setThumbnail(message.author.displayAvatarURL())
         .setColor(1146986)
         .setTitle('Community Suggestions')
         .setDescription(message.content)
