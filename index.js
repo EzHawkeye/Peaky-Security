@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const botConfig = require("./botconfig.json");
 
 const SUGGESTION_CHANNEL = '746793292775162007'
+const SUGGESTION_CHANNEL2 = '746895559201259663'
 
 Discord.RichEmbed = Discord.MessageEmbed;
 
@@ -73,6 +74,23 @@ bot.on("message", async message => {
         .setAuthor(message.member.nickname ? message.member.nickname : message.author.tag, message.author.displayAvatarURL())
         .setColor(15844367)
         .setTitle('Community Suggesties')
+        .setDescription(message.content)
+        .setFooter(`Community | ${message.author.tag}`)
+        message.channel.send(embed).then((message) => {
+          const sent = message;
+          sent.react ('✅');
+            sent.react('❌');
+            
+          
+        });
+        return message.delete();
+      }
+
+      if (message.channel.id === SUGGESTION_CHANNEL2) {
+        let embed = new Discord.RichEmbed()
+        .setAuthor(message.member.nickname ? message.member.nickname : message.author.tag, message.author.displayAvatarURL())
+        .setColor(15844367)
+        .setTitle('Poll')
         .setDescription(message.content)
         .setFooter(`Community | ${message.author.tag}`)
         message.channel.send(embed).then((message) => {
