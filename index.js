@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const botConfig = require("./botconfig.json");
 
-const SUGGESTION_CHANNEL = '775501531915091968'
+const SUGGESTION_CHANNEL = '862845823242076190'
 const SUGGESTION_CHANNEL2 = '746895559201259663'
 
 Discord.RichEmbed = Discord.MessageEmbed;
@@ -41,7 +41,7 @@ bot.on("ready", async () => {
 
     console.log(`BOOMMM ${bot.user.username} is online!`);
 
-    bot.user.setActivity("🛠️ Community", { type: "PLAYING" });
+    bot.user.setActivity("🛠️ Infinity API", { type: "PLAYING" });
 
 })
 
@@ -73,7 +73,7 @@ bot.on("message", async message => {
         let embed = new Discord.RichEmbed()
         .setAuthor(message.member.nickname ? message.member.nickname : message.author.tag, message.author.displayAvatarURL())
         .setColor(8359053)
-        .setTitle('Community Suggesties')
+        .setTitle('Infinity Security Suggestions')
         .setDescription(message.content)
         .setFooter(`Community | ${message.author.tag}`)
         message.channel.send(embed).then((message) => {
