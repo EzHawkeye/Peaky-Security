@@ -75,7 +75,7 @@ bot.on("message", async message => {
         .setColor(15158332)
         .setTitle('Peaky Security Suggestions')
         .setDescription(message.content)
-        .setFooter(`Peaksy Sec.. | ${message.author.tag}`)
+        .setFooter(`Peaky Sec.. | ${message.author.tag}`)
         message.channel.send(embed).then((message) => {
           const sent = message;
           sent.react ('✅');
