@@ -16,23 +16,23 @@ bot.commands = new Discord.Collection();
 
 fs.readdir("./commands/", (err, files) => {
 
-    if (err) console.log(err);
+  if (err) console.log(err);
 
-    var jsFiles = files.filter(f => f.split(".").pop() === "js");
+  var jsFiles = files.filter(f => f.split(".").pop() === "js");
 
-    if (jsFiles.length <= 0) {
-        console.log("Kon geen files vinden");
-        return;
-    }
- 
-    jsFiles.forEach((f, i) => {
+  if (jsFiles.length <= 0) {
+      console.log("Kon geen files vinden");
+      return;
+  }
 
-        var fileGet = require(`./commands/${f}`);
-        console.log(`De kanker file ${f} is geladen`);
+  jsFiles.forEach((f, i) => {
 
-        bot.commands.set(fileGet.help.name, fileGet);
+      var fileGet = require(`./commands/${f}`);
+      console.log(`De kanker file ${f} is geladen`);
 
-    })
+      bot.commands.set(fileGet.help.name, fileGet);
+
+  })
 
 });
 
