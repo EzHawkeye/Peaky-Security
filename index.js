@@ -92,7 +92,7 @@ bot.on("message", async message => {
         .setColor(15844367)
         .setTitle('Poll')
         .setDescription(message.content)
-        .setFooter(`Community | ${message.author.tag}`)
+        .setFooter(`Communit | ${message.author.tag}`)
         message.channel.send(embed).then((message) => {
           const sent = message;
           sent.react ('✅');
