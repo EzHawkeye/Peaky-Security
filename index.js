@@ -72,7 +72,7 @@ bot.on("message", async message => {
     if (message.channel.id === SUGGESTION_CHANNEL) {
         let embed = new Discord.RichEmbed()
         .setAuthor(message.member.nickname ? message.member.nickname : message.author.tag, message.author.displayAvatarURL())
-        .setColor(8359053)
+        .setColor(15158332)
         .setTitle('Infinity Security Suggestions')
         .setDescription(message.content)
         .setFooter(`Community | ${message.author.tag}`)
