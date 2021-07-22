@@ -73,9 +73,9 @@ bot.on("message", async message => {
         let embed = new Discord.RichEmbed()
         .setAuthor(message.member.nickname ? message.member.nickname : message.author.tag, message.author.displayAvatarURL())
         .setColor(15158332)
-        .setTitle('Infinity Security Suggestions')
+        .setTitle('Peaky Security Suggestions')
         .setDescription(message.content)
-        .setFooter(`Community | ${message.author.tag}`)
+        .setFooter(`Peaky Sec... | ${message.author.tag}`)
         message.channel.send(embed).then((message) => {
           const sent = message;
           sent.react ('✅');
