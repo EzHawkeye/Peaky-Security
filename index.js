@@ -41,7 +41,7 @@ bot.on("ready", async () => {
 
     console.log(`BOOMMM ${bot.user.username} is online!`);
 
-    bot.user.setActivity("🛠️ Infinity API", { type: "PLAYING" });
+    bot.user.setActivity("🛠️ Peaky API", { type: "PLAYING" });
 
 })
 
